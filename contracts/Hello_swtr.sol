@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.19;
 
-contract Swisstronik {
+contract prx {
     string private message;
 
     function initialize(string memory _message) public {

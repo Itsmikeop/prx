@@ -3,6 +3,7 @@ require('@openzeppelin/hardhat-upgrades');
 require("dotenv").config();
 
 module.exports = {
+  defaultNetwork: "swisstronik",
   solidity: "0.8.20",
   networks: {
     swisstronik: {
@@ -10,20 +11,18 @@ module.exports = {
       accounts: [`0x${process.env.PRIVATE_KEY}`],
     },
   },
-};
-module.exports = {
-  // ...rest of the config...
-  etherscan: {
-    apiKey: `ANY_STRING_WILL_DO`,
-    customChains: [
-      {
-        network: "swisstronik",
-        chainId: 1291,
-        urls: {
-          apiURL: "https://explorer-evm.testnet.swisstronik.com/api",
-          browserURL: "https://explorer-evm.testnet.swisstronik.com",
-        },
+
+etherscan: {
+  apiKey: `ANY_STRING_WILL_DO`,
+  customChains: [
+    {
+      network: "swisstronik",
+      chainId: 1291,
+      urls: {
+        apiURL: "https://explorer-evm.testnet.swisstronik.com/api",
+        browserURL: "https://explorer-evm.testnet.swisstronik.com",
       },
-    ],
-  },
+    },
+  ],
+},
 };

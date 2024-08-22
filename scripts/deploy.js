@@ -22,6 +22,12 @@ async function main() {
 
   console.log(`Deployment transaction hash: https://explorer-evm.testnet.swisstronik.com/address/${upgradedSwisstronik.target}`);
 }
+ 
+await hre.run("verify:verify", {
+  address: contract.target, // address of deployed contract
+  constructorArguments: [JAN_1ST_2030], // constructor arguments
+});
+
 
 main()
   .then(() => process.exit(0))
